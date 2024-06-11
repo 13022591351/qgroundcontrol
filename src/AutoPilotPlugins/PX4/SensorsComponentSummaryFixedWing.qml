@@ -19,8 +19,8 @@ Item {
     property Fact gyro0IdFact:          controller.getParameterFact(-1, "CAL_GYRO0_ID")
     property Fact accel0IdFact:         controller.getParameterFact(-1, "CAL_ACC0_ID")
     property Fact dpressOffFact:        controller.getParameterFact(-1, "SENS_DPRES_OFF")
-    property Fact airspeedDisabledFact: controller.getParameterFact(-1, "FW_ARSP_MODE")
-    property Fact airspeedBreakerFact:  controller.getParameterFact(-1, "CBRK_AIRSPD_CHK")
+    property Fact airspeedDisabledFact: controller.getParameterFact(-1, "FW_USE_AIRSPD")
+    property Fact airspeedBreakerFact:  controller.getParameterFact(-1, "SYS_HAS_NUM_ASPD")
 
     property bool _airspeedVisible:     airspeedDisabledFact.value == 0 && airspeedBreakerFact.value !== 162128
     property bool _airspeedCalRequired: _airspeedVisible && dpressOffFact.value === 0

@@ -33,11 +33,15 @@ Item {
         QGCTabButton {
             text:       qsTr("Attitude Controller")
         }
+        QGCTabButton {
+            text:       qsTr("Turbojet Controller")
+        }
     }
 
     property var pages:  [
         "PX4TuningComponentPlaneRate.qml",
         "PX4TuningComponentPlaneAttitude.qml",
+        "PX4TuningComponentPlaneTurbojet.qml",
     ]
 
     Loader {

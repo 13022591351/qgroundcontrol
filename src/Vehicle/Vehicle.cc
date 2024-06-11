@@ -1707,7 +1707,7 @@ void Vehicle::setEventsMetadata(uint8_t compid, const QString& metadataJsonFileN
 
     // get the mode group for some well-known flight modes
     int modeGroups[2]{-1, -1};
-    const QString modes[2]{"Takeoff", "Mission"};
+    const QString modes[2]{tr("Takeoff"), tr("Mission")};
     for (size_t i = 0; i < sizeof(modeGroups)/sizeof(modeGroups[0]); ++i) {
         uint8_t     base_mode;
         uint32_t    custom_mode;

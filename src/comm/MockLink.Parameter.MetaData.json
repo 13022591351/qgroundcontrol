@@ -1331,7 +1331,7 @@
       "rebootRequired": true
     },
     {
-      "name": "CBRK_AIRSPD_CHK",
+      "name": "SYS_HAS_NUM_ASPD",
       "type": "Int32",
       "default": 0,
       "group": "Circuit Breaker",
@@ -3998,7 +3998,7 @@
       "units": "deg"
     },
     {
-      "name": "FW_ARSP_MODE",
+      "name": "FW_USE_AIRSPD",
       "type": "Int32",
       "default": 0,
       "group": "FW Attitude Control",

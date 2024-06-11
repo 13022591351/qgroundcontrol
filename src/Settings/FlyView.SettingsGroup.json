@@ -27,7 +27,7 @@
     "name":             "alternateInstrumentPanel",
     "shortDesc": "Use Vertical Instrument Panel instead of the default one",
     "type":             "bool",
-    "default":     false
+    "default":     true
 },
 {
     "name":             "showAdditionalIndicatorsCompass",
@@ -51,7 +51,7 @@
     "name":         "showSimpleCameraControl",
     "shortDesc":    "Show controls for camera triggering using MAV_CMD_DO_DIGICAM_CONTROL.",
     "type":         "bool",
-    "default":      true
+    "default":      false
 },
 {
     "name":         "showObstacleDistanceOverlay",

@@ -15,8 +15,8 @@
 #include "PX4AutoPilotPlugin.h"
 #include "SensorsComponentController.h"
 
-const char* SensorsComponent::_airspeedBreakerParam =   "CBRK_AIRSPD_CHK";
-const char* SensorsComponent::_airspeedDisabledParam =  "FW_ARSP_MODE";
+const char* SensorsComponent::_airspeedBreakerParam =   "SYS_HAS_NUM_ASPD";
+const char* SensorsComponent::_airspeedDisabledParam =  "FW_USE_AIRSPD";
 const char* SensorsComponent::_airspeedCalParam =       "SENS_DPRES_OFF";
 
 const char* SensorsComponent::_magEnabledParam =  "SYS_HAS_MAG";

@@ -817,9 +817,10 @@
     </parameter>
   </group>
   <group name="Circuit Breaker">
-    <parameter name="CBRK_AIRSPD_CHK" default="0" type="INT32" category="Developer">
-      <short_desc>Circuit breaker for airspeed sensor</short_desc>
-      <long_desc>Setting this parameter to 162128 will disable the check for an airspeed sensor. The sensor driver will not be started and it cannot be calibrated. WARNING: ENABLING THIS CIRCUIT BREAKER IS AT OWN RISK</long_desc>
+    <parameter name="SYS_HAS_NUM_ASPD" default="0" type="INT32" category="Developer">
+      <short_desc>Control if the vehicle has an airspeed sensor</short_desc>
+      <long_desc>Set this to 0 if the board has no airspeed sensor.
+                 If set to 0, the preflight checks will not check for the presence of an airspeed sensor.</long_desc>
       <min>0</min>
       <max>162128</max>
       <reboot_required>true</reboot_required>
@@ -2877,9 +2878,13 @@
       <max>720</max>
       <unit>deg</unit>
     </parameter>
-    <parameter name="FW_ARSP_MODE" default="0" type="INT32">
-      <short_desc>Airspeed mode</short_desc>
-      <long_desc>On vehicles without airspeed sensor this parameter can be used to enable flying without an airspeed reading</long_desc>
+    <parameter name="FW_USE_AIRSPD" default="0" type="INT32">
+      <short_desc>Use airspeed for control</short_desc>
+      <long_desc>If set to 1, the airspeed measurement data, if valid, is used in the following controllers:
+                 - Rate controller: output scaling
+                 - Attitude controller: coordinated turn controller
+                 - Position controller: airspeed setpoint tracking, takeoff logic
+                 - VTOL: transition logic</long_desc>
       <values>
         <value code="0">Use airspeed in controller</value>
         <value code="1">Do not use airspeed in controller</value>

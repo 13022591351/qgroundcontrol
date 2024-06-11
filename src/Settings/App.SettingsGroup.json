@@ -105,7 +105,7 @@
     "shortDesc": "Check Internet connection",
     "longDesc":  "Check Internet connection before accessing Internet resources.",
     "type":             "bool",
-    "default":     true
+    "default":     false
 },
 {
     "name":             "virtualJoystick",

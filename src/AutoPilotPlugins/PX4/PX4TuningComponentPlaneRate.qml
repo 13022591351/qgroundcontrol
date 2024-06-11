@@ -128,7 +128,7 @@ ColumnLayout {
                     step:           0.005
                 }
                 ListElement {
-                    title:          qsTr("Integral Gain (FW_YR_D)")
+                    title:          qsTr("Differential Gain (FW_YR_D)")
                     description:    qsTr("Generally does not need much adjustment, reduce this when seeing slow oscillations.")
                     param:          "FW_YR_D"
                     min:            0.0

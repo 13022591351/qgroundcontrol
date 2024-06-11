@@ -37,8 +37,8 @@ const RequestMetaDataTypeStateMachine::StateFn RequestMetaDataTypeStateMachine::
     RequestMetaDataTypeStateMachine::_stateRequestCompInfoDeprecated,
     RequestMetaDataTypeStateMachine::_stateRequestMetaDataJson,
     RequestMetaDataTypeStateMachine::_stateRequestMetaDataJsonFallback,
-    RequestMetaDataTypeStateMachine::_stateRequestTranslationJson,
-    RequestMetaDataTypeStateMachine::_stateRequestTranslate,
+//    RequestMetaDataTypeStateMachine::_stateRequestTranslationJson,
+//    RequestMetaDataTypeStateMachine::_stateRequestTranslate,
     RequestMetaDataTypeStateMachine::_stateRequestComplete,
 };
 

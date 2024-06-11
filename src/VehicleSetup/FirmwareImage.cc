@@ -259,63 +259,64 @@ bool FirmwareImage::_px4Load(const QString& imageFilename)
     MAV_AUTOPILOT firmwareType = (MAV_AUTOPILOT)px4Json[_jsonMavAutopilotKey].toInt(MAV_AUTOPILOT_PX4);
     emit statusMessage(QString("MAV_AUTOPILOT = %1").arg(firmwareType));
     
-    // Decompress the parameter xml and save to file
-    QByteArray decompressedBytes;
-    bool success = _decompressJsonValue(px4Json,               // JSON object
-                                        bytes,                 // Raw bytes of JSON document
-                                        _jsonParamXmlSizeKey,  // key which holds byte size
-                                        _jsonParamXmlKey,      // key which holds compressed bytes
-                                        decompressedBytes);    // Returned decompressed bytes
-    if (success) {
-        QString parameterFilename = QGCApplication::cachedParameterMetaDataFile();
-        QFile parameterFile(QGCApplication::cachedParameterMetaDataFile());
+    // // Decompress the parameter xml and save to file
+    // QByteArray decompressedBytes;
+    // bool success = _decompressJsonValue(px4Json,               // JSON object
+    //                                     bytes,                 // Raw bytes of JSON document
+    //                                     _jsonParamXmlSizeKey,  // key which holds byte size
+    //                                     _jsonParamXmlKey,      // key which holds compressed bytes
+    //                                     decompressedBytes);    // Returned decompressed bytes
+    // if (success) {
+    //     QString parameterFilename = QGCApplication::cachedParameterMetaDataFile();
+    //     QFile parameterFile(QGCApplication::cachedParameterMetaDataFile());
 
-        if (parameterFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
-            qint64 bytesWritten = parameterFile.write(decompressedBytes);
-            if (bytesWritten != decompressedBytes.count()) {
-                emit statusMessage(tr("Write failed for parameter meta data file, error: %1").arg(parameterFile.errorString()));
-                parameterFile.close();
-                QFile::remove(parameterFilename);
-            } else {
-                parameterFile.close();
-            }
-        } else {
-            emit statusMessage(tr("Unable to open parameter meta data file %1 for writing, error: %2").arg(parameterFilename, parameterFile.errorString()));
-        }
+    //     if (parameterFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+    //         qint64 bytesWritten = parameterFile.write(decompressedBytes);
+    //         if (bytesWritten != decompressedBytes.count()) {
+    //             emit statusMessage(tr("Write failed for parameter meta data file, error: %1").arg(parameterFile.errorString()));
+    //             parameterFile.close();
+    //             QFile::remove(parameterFilename);
+    //         } else {
+    //             parameterFile.close();
+    //         }
+    //     } else {
+    //         emit statusMessage(tr("Unable to open parameter meta data file %1 for writing, error: %2").arg(parameterFilename, parameterFile.errorString()));
+    //     }
 
-        // Cache this file with the system
-        CompInfoParam::_cachePX4MetaDataFile(parameterFilename);
-    }
+    //     // Cache this file with the system
+    //     CompInfoParam::_cachePX4MetaDataFile(parameterFilename);
+    // }
 
-    // Decompress the airframe xml and save to file
-    success = _decompressJsonValue(px4Json,                         // JSON object
-                                        bytes,                      // Raw bytes of JSON document
-                                        _jsonAirframeXmlSizeKey,    // key which holds byte size
-                                        _jsonAirframeXmlKey,        // key which holds compressed bytes
-                                        decompressedBytes);         // Returned decompressed bytes
-    if (success) {
-        QString airframeFilename = QGCApplication::cachedAirframeMetaDataFile();
-        //qDebug() << airframeFilename;
-        QFile airframeFile(QGCApplication::cachedAirframeMetaDataFile());
+    // // Decompress the airframe xml and save to file
+    // success = _decompressJsonValue(px4Json,                         // JSON object
+    //                                     bytes,                      // Raw bytes of JSON document
+    //                                     _jsonAirframeXmlSizeKey,    // key which holds byte size
+    //                                     _jsonAirframeXmlKey,        // key which holds compressed bytes
+    //                                     decompressedBytes);         // Returned decompressed bytes
+    // if (success) {
+    //     QString airframeFilename = QGCApplication::cachedAirframeMetaDataFile();
+    //     //qDebug() << airframeFilename;
+    //     QFile airframeFile(QGCApplication::cachedAirframeMetaDataFile());
 
-        if (airframeFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
-            qint64 bytesWritten = airframeFile.write(decompressedBytes);
-            if (bytesWritten != decompressedBytes.count()) {
-                // FIXME: What about these warnings?
-                emit statusMessage(tr("Write failed for airframe meta data file, error: %1").arg(airframeFile.errorString()));
-                airframeFile.close();
-                QFile::remove(airframeFilename);
-            } else {
-                airframeFile.close();
-            }
-        } else {
-            emit statusMessage(tr("Unable to open airframe meta data file %1 for writing, error: %2").arg(airframeFilename, airframeFile.errorString()));
-        }
-    }
+    //     if (airframeFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+    //         qint64 bytesWritten = airframeFile.write(decompressedBytes);
+    //         if (bytesWritten != decompressedBytes.count()) {
+    //             // FIXME: What about these warnings?
+    //             emit statusMessage(tr("Write failed for airframe meta data file, error: %1").arg(airframeFile.errorString()));
+    //             airframeFile.close();
+    //             QFile::remove(airframeFilename);
+    //         } else {
+    //             airframeFile.close();
+    //         }
+    //     } else {
+    //         emit statusMessage(tr("Unable to open airframe meta data file %1 for writing, error: %2").arg(airframeFilename, airframeFile.errorString()));
+    //     }
+    // }
     
     // Decompress the image and save to file
+    QByteArray decompressedBytes;
     _imageSize = px4Json.value(QString("image_size")).toInt();
-    success = _decompressJsonValue(px4Json,               // JSON object
+    bool success = _decompressJsonValue(px4Json,               // JSON object
                                    bytes,                 // Raw bytes of JSON document
                                    _jsonImageSizeKey,     // key which holds byte size
                                    _jsonImageKey,         // key which holds compressed bytes
