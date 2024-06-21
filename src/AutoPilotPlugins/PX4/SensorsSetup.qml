@@ -453,8 +453,8 @@ Item {
                 width:          _buttonWidth
                 text:           qsTr("Airspeed")
                 visible:        (controller.vehicle.fixedWing || controller.vehicle.vtol || controller.vehicle.airship) &&
-                                controller.getParameterFact(-1, "FW_USE_AIRSPD").value == 0 &&
-                                controller.getParameterFact(-1, "SYS_HAS_NUM_ASPD").value !== 162128 &&
+                                controller.getParameterFact(-1, "FW_USE_AIRSPD").value == 1 &&
+                                controller.getParameterFact(-1, "SYS_HAS_NUM_ASPD").value >= 1 &&
                                 QGroundControl.corePlugin.options.showSensorCalibrationAirspeed &&
                                 showSensorCalibrationAirspeed
                 indicatorGreen: sens_dpres_off.value !== 0

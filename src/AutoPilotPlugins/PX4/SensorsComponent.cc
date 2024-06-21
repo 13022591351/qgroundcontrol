@@ -67,7 +67,7 @@ bool SensorsComponent::setupComplete(void) const
 
     if (_vehicle->fixedWing() || _vehicle->vtol() || _vehicle->airship()) {
         if (!_vehicle->parameterManager()->getParameter(FactSystem::defaultComponentId, _airspeedDisabledParam)->rawValue().toBool() &&
-                _vehicle->parameterManager()->getParameter(FactSystem::defaultComponentId, _airspeedBreakerParam)->rawValue().toInt() != 162128 &&
+                _vehicle->parameterManager()->getParameter(FactSystem::defaultComponentId, _airspeedBreakerParam)->rawValue().toInt() >= 1 &&
                 _vehicle->parameterManager()->getParameter(FactSystem::defaultComponentId, _airspeedCalParam)->rawValue().toFloat() == 0.0f) {
             return false;
         }

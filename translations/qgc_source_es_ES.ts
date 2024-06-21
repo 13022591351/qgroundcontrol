@@ -5791,67 +5791,47 @@ Click Ok to start the auto-tuning process.
         <translation type="unfinished">Downloaded firmware board id does not match hardware board id: %1 != %2</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="276"/>
-        <source>Write failed for parameter meta data file, error: %1</source>
-        <translation type="unfinished">Write failed for parameter meta data file, error: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="283"/>
-        <source>Unable to open parameter meta data file %1 for writing, error: %2</source>
-        <translation type="unfinished">Unable to open parameter meta data file %1 for writing, error: %2</translation>
-    </message>
-    <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="305"/>
-        <source>Write failed for airframe meta data file, error: %1</source>
-        <translation type="unfinished">Write failed for airframe meta data file, error: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="312"/>
-        <source>Unable to open airframe meta data file %1 for writing, error: %2</source>
-        <translation type="unfinished">Unable to open airframe meta data file %1 for writing, error: %2</translation>
-    </message>
-    <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="338"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="339"/>
         <source>Unable to open decompressed file %1 for writing, error: %2</source>
         <translation type="unfinished">Unable to open decompressed file %1 for writing, error: %2</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="344"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="345"/>
         <source>Write failed for decompressed image file, error: %1</source>
         <translation type="unfinished">Write failed for decompressed image file, error: %1</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="368"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="369"/>
         <source>Firmware file has invalid decompressed size for %1</source>
         <translation type="unfinished">Firmware file has invalid decompressed size for %1</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="380"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="381"/>
         <source>Could not find compressed bytes for %1 in Firmware file</source>
         <translation type="unfinished">Could not find compressed bytes for %1 in Firmware file</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="385"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="386"/>
         <source>Incorrectly formed compressed bytes section for %1 in Firmware file</source>
         <translation type="unfinished">Incorrectly formed compressed bytes section for %1 in Firmware file</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="401"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="402"/>
         <source>Firmware file has 0 length %1</source>
         <translation type="unfinished">Firmware file has 0 length %1</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="405"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="406"/>
         <source>Size for decompressed %1 does not match stored size: Expected(%1) Actual(%2)</source>
         <translation type="unfinished">Size for decompressed %1 does not match stored size: Expected(%1) Actual(%2)</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="409"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="410"/>
         <source>Successfully decompressed %1</source>
         <translation type="unfinished">Successfully decompressed %1</translation>
     </message>
     <message>
-        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="437"/>
+        <location filename="../src/VehicleSetup/FirmwareImage.cc" line="438"/>
         <source>Unabled to open firmware file %1, %2</source>
         <translation type="unfinished">Unabled to open firmware file %1, %2</translation>
     </message>
@@ -11912,12 +11892,6 @@ Is this really what you want?</translation>
         <source>Attitude Controller</source>
         <translation type="unfinished">Attitude Controller</translation>
     </message>
-    <message>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneAll.qml" line="37"/>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneAll.qml" line="37"/>
-        <source>Turbojet Controller</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>PX4TuningComponentPlaneAttitude</name>
@@ -12126,45 +12100,6 @@ Is this really what you want?</translation>
         <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTECS.qml" line="38"/>
         <source>TODO</source>
         <translation type="unfinished">TODO</translation>
-    </message>
-</context>
-<context>
-    <name>PX4TuningComponentPlaneTurbojet</name>
-    <message>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="31"/>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="31"/>
-        <source>Roll</source>
-        <translation type="unfinished">Roll</translation>
-    </message>
-    <message>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="38"/>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="38"/>
-        <source>Time constant (FW_R_TC)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="39"/>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="39"/>
-        <source>The latency between a roll step input and the achieved setpoint (inverse to a P gain)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="48"/>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="48"/>
-        <source>Pitch</source>
-        <translation type="unfinished">Pitch</translation>
-    </message>
-    <message>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="55"/>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="55"/>
-        <source>Time Constant (FW_P_TC)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="56"/>
-        <location filename="../src/AutoPilotPlugins/PX4/PX4TuningComponentPlaneTurbojet.qml" line="56"/>
-        <source>The latency between a pitch step input and the achieved setpoint (inverse to a P gain)</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

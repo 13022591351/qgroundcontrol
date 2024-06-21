@@ -194,7 +194,7 @@ RowLayout {
 
                 Switch {
                     id:        autotuningEnabled
-                    checked:   true
+                    checked:   false
                 }
 
                 QGCLabel {
